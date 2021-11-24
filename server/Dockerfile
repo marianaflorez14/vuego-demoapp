@@ -2,9 +2,10 @@
 # Bring the already created image by go
 FROM golang:1.16-alpine3.13
 
-# Establish the directory 
+# Establish the directory inside the container
 WORKDIR /go/src/app
 
+#
 COPY . .
 
 # Exposing PORT 4001 for the incoming requests

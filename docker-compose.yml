@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  backend:
+    image: marianabetancur14/vuego-demoapp:backend
+    ports:
+      - 4001:4001
+      
+  frontend:
+    image: marianabetancur14/vuego-demoapp:frontend
+    ports:
+      - 5000:80
+    environment:
+      - VUE_APP_API_ENDPOINT=http://backend:4001/api
+    depends_on: 
+      - backend
