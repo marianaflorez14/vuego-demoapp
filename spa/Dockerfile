@@ -13,7 +13,7 @@ COPY package*.json ./
 COPY . .
 
 # Endpoint of the frontend
-RUN echo "VUE_APP_API_ENDPOINT=\"http://localhost:4000/api\"" > .env.production
+RUN echo "VUE_APP_API_ENDPOINT=\"http://localhost:4001/api\"" > .env.production
 
 # install app dependencies
 
